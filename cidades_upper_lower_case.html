@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+
+<body>
+	<div>
+		<p>Cidadezinhas</p>
+		
+		<ul class="listinha">
+		
+		</ul>
+		
+	</div>
+</body>
+
+<script>
+var list = document.querySelector('.listinha');
+
+var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+
+for(var i = 0; i < cities.length; i++) {
+	var input = cities[i];
+	input = input.toLowerCase();
+	
+	var inicial = input.slice(0,1);
+
+	cidade = input.replace(inicial, inicial.toUpperCase());
+	
+	var result = cidade;
+	var listItem = document.createElement('li');
+	listItem.textContent = result;
+	list.appendChild(listItem);
+}
+</script>

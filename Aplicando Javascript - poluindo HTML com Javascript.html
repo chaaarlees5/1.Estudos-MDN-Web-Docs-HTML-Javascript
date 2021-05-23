@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Exemplo aplicando JavaScript</title>
+</head>
+<body>
+<button onclick="criarParagrafo()">Me clique!</button>
+</body>
+
+<script>
+
+  // O JavaScript fica aqui
+
+function criarParagrafo() {
+  let para = document.createElement('p');
+  para.textContent = 'Você clicou no botão!';
+  document.body.appendChild(para);
+}
+
+</script>
+
+</html>

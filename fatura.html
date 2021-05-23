@@ -1,0 +1,53 @@
+<meta charset="utf-8">
+
+<body>
+	<div>
+		<h1>Vendas</h1>
+		
+		<ol class="littlePrices">
+		
+		</ol>
+		
+	</div>
+	
+	<div>
+		
+		<ul class="totals">
+		
+		</ul>
+		
+	</div>
+</body>
+
+
+<script>
+var list = document.querySelector('.littlePrices');
+var totalBox = document.querySelector('.totals');
+var total = 0;
+
+// number 1
+var products = ['Underpants:6.99','Socks:5.99','T-shirt:14.99','Trousers:31.99','Shoes:23.99'];
+                
+
+for (var i = 0; i < products.length; i++) { // number 2
+  // number 3
+	//var input = products[i];
+	//var refer = input.indexOf(':');
+	//var name = input.slice(0,refer);
+	//var priceString = input.slice(refer + 1);
+	//var price = Number(priceString);
+	var subArray = products[i].split(':');
+	var name = subArray[0];
+	var price = Number(subArray[1]);
+  // number 4
+	total += price;
+  // number 5
+	var finalText = name + " - $" + price;
+
+	var listItem = document.createElement('li');
+	listItem.textContent = finalText;
+	list.appendChild(listItem);
+}
+
+totalBox.textContent = 'Total: $' + total.toFixed(2);
+</script>

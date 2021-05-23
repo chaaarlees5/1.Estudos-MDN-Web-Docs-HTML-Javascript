@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+
+<body>
+	<div>
+		<p>Cidadezinhas</p>
+		
+		<ol class="estacoes">
+		
+		</ol>
+		
+	</div>
+	
+</body>
+
+<script>
+var list = document.querySelector('.estacoes');
+
+var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+                'GNF576746573fhdg4737dh4;Greenfield',
+                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+                'SYB4f65hf75f736463;Stalybridge',
+                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+
+for (var i = 0; i < stations.length; i++) {
+	var input = stations[i];
+	var codeStation = input.slice(0,3);
+	var refer = input.indexOf(";");
+	var nameStation = input.slice(refer + 1);
+	
+	var result = codeStation + ": " + nameStation;
+	var listItem = document.createElement('li');
+	listItem.textContent = result;
+	list.appendChild(listItem);
+}
+
+</script>

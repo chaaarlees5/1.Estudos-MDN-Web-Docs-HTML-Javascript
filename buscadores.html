@@ -1,0 +1,59 @@
+<meta charset="utf-8">
+
+<body>
+	
+	<label for="entry">Campo de Busca: </label>
+	<input type="text" id="entry" class="entrada">
+	<input type="submit" value="Procure!" class="butao">
+	
+	<div>
+		
+		<ul class="historico">
+		
+		</ul>
+		
+	</div>
+	
+	
+</body>
+
+
+<script>
+
+var list = document.querySelector('.historico');
+var searchInput = document.querySelector('.entrada');
+var searchBtn = document.querySelector('.butao');
+
+list.innerHTML = '';
+
+var myHistory = [];
+//Entra na função quando o borão é clicado.
+searchBtn.onclick = function() {
+//Só executa a ação se o campo não estiver vazio.
+	if (searchInput.value !== '') {
+//Adiciona ao começo da array myHistory o valor digitado 
+	myHistory.unshift(searchInput.value);
+//Esvazia a lista para não exibir valores duplicados.
+    list.innerHTML = '';
+
+//Exibe todos os termos da Array myHistory
+    for (var i = 0; i < myHistory.length; i++) {
+      itemText = myHistory[i];
+      var listItem = document.createElement('li');
+      listItem.textContent = itemText;
+      list.appendChild(listItem);
+    }
+
+//Se já tiver 5 itens na array myHistory, exclui o último da lista
+    if (myHistory.length >= 5) {
+  
+	myHistory.pop();
+
+    }
+
+//Limoa o valor digitado e coloca o foco no campo para digitar os valores.	
+    searchInput.value = '';
+    searchInput.focus();
+  }
+}
+</script>
