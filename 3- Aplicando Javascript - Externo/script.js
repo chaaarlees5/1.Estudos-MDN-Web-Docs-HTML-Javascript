@@ -1,6 +1,6 @@
 function createParagraph() {
   let para = document.createElement('p');
-  para.textContent = 'Você clicou no botão!';
+  para.textContent = 'VocÃª clicou no botÃ£o!';
   document.body.appendChild(para);
 }
 

@@ -1,5 +1,5 @@
 <html lang="en">
-<meta charset="latin">
+<meta charset="UTF-8">
 <head>
  
   <title>Exemplo aplicando JavaScript</title>
@@ -7,24 +7,23 @@
 <body>
 	<button>Clique em mim</button>
 	<button>Clique nele</button>
-	<button>Clique em nós</button>
+	<button>Clique em nÃ³s</button>
 
 </body>
 
 <script>
-  // O JavaScript fica aqui
-// Função: Cria um novo parágrafo e o insere no fim do arquivo HTML.
+// FunÃ§Ã£o: Cria um novo parÃ¡grafo e o insere no fim do arquivo HTML.
 
 function criarParagrafo() {
   let para = document.createElement('p');
-  para.textContent = 'Você clicou no botão!';
+  para.textContent = 'VocÃª clicou no botÃ£o!';
   document.body.appendChild(para);
 }
 /*
-  1. Captura referências de todos os botões na página e armazena isso em um array.
-  2. Vai até todos os botões e adiciona um event listener click a cada um deles.
+  1. Captura referÃªncias de todos os botÃµes na pÃ¡gina e armazena isso em um array.
+  2. Vai atÃ© todos os botÃµes e adiciona um event listener click a cada um deles.
 
-  Quando cada botão é clicado, a função criarParagrafo() será executada.
+  Quando cada botÃ£o Ã© clicado, a funÃ§Ã£oo criarParagrafo() serÃ¡ executada.
 */
 
 const botoes = document.querySelectorAll('button');
