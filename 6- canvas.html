@@ -1,8 +1,22 @@
-let x = 50; let y = 50;
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+    </body>
 
-// Edit the two lines below here ONLY
-x = 50;
-y = 50;
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
 
-ctx.fillStyle = 'green';
-ctx.fillRect(10, 10, x, y);
+        let x = 50; let y = 50;
+
+        x = 300;
+        y = 800;
+
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(10, 10, x, y);
+    </script>
+</html>

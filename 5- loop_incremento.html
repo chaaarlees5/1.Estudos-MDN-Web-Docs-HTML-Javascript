@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Basic loop example</title>
+    <title>Exemplo de loop básico</title>
     <style>
       * {
         box-sizing: border-box;
@@ -27,7 +27,7 @@
   <body>
 
     <div>
-      <p>Invoice totals before sales tax ($):</p>
+      <p>Valor total antes do imposto sobre venda ($):</p>
 
       <ol class="before">
 
@@ -36,11 +36,11 @@
     </div>
 
     <div>
-      <p>Invoice totals with 6% sales tax added ($):</p>
+      <p>Valor com o imposto de 6% acrescentado ($):</p>
 
-      <ul class="after">
+      <ol class="after">
 
-      </ul>
+      </ol>
 
     </div>
 
@@ -49,19 +49,23 @@
 
   <script>
 
-const totals = [191.45, 890.56, 67.99, 12.34, 235.64];
-const beforeList = document.querySelector('.before');
-const afterList = document.querySelector('.after');
-for(let i = 0; i < totals.length; i++) {
-    const listItem = document.createElement('li');
-    listItem.textContent = totals[i];
-    beforeList.appendChild(listItem);
-}
-for(let j = 0; j < totals.length; j++) {
-    const listItem = document.createElement('li');
-    listItem.textContent = (totals[j] * 1.06).toFixed(2);
-    afterList.appendChild(listItem);
-}
+    const totals = [191.45, 890.56, 67.99, 12.34, 235.64];
+    const beforeList = document.querySelector('.before');
+    const afterList = document.querySelector('.after');
+    
+    //Criação de lista com os valores contidos na array 'totals'.
+    for(let i = 0; i < totals.length; i++) {
+        const listItem = document.createElement('li');
+        listItem.textContent = totals[i];
+        beforeList.appendChild(listItem);
+    }
+
+    //Criação de lista com o imposto de 6% acrescido. **toFixed restringe o número a ter dois digitos após a vírgula.
+    for(let j = 0; j < totals.length; j++) {
+        const listItem = document.createElement('li');
+        listItem.textContent = (totals[j] * 1.06).toFixed(2);
+        afterList.appendChild(listItem);
+    }
     
   </script>
 </html>

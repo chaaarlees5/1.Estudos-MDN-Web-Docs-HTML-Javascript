@@ -16,14 +16,16 @@ var list = document.querySelector('.listinha');
 
 var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
 
+//Analisa strings da array 'cities'.
 for(var i = 0; i < cities.length; i++) {
 	var input = cities[i];
+//Altera tudo para letras minúsculas.
 	input = input.toLowerCase();
-	
+//Coloca a primeira letra em uma variável e transforma ela em maiúscula
 	var inicial = input.slice(0,1);
-
 	cidade = input.replace(inicial, inicial.toUpperCase());
-	
+
+//Adiciona palavra alterada em uma lista
 	var result = cidade;
 	var listItem = document.createElement('li');
 	listItem.textContent = result;

@@ -24,8 +24,10 @@ var greetings = ['Happy Birthday!',
                  'You\'re all I want for Christmas',
                  'Get well soon'];
 
+//Acrescenta strings contidos na array greetings a variável input.
 for(var i = 0; i < greetings.length; i++) {
   var input = greetings[i];
+//Analisa se a string que está em input contém a palavra "Christmas", se for verdade, adiciona a string em uma lista
   if(greetings[i].indexOf('Christmas') !== -1) {
     var result = input;
     var listItem = document.createElement('li');

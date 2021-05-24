@@ -17,7 +17,9 @@
 
 		checkBox.addEventListener('change',function() {
         //checkBox.disabled = true;
-			if(shoppingDone){ //Quando não especificamos, ele analisa se o valor digitado nos parenteses existe ou é true.. Ou seja, não é false, undefined, null, 0, NaN, ou uma string vazia ('')
+//Quando não especificamos, ele analisa se o valor digitado nos parenteses existe ou é true..
+//Ou seja, não é false, undefined, null, 0, NaN, ou uma string vazia ('')
+			if(shoppingDone){ 
 				shoppingDone = false;
 				updateAllowance();
 			}

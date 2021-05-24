@@ -25,23 +25,25 @@ var list = document.querySelector('.littlePrices');
 var totalBox = document.querySelector('.totals');
 var total = 0;
 
-// number 1
 var products = ['Underpants:6.99','Socks:5.99','T-shirt:14.99','Trousers:31.99','Shoes:23.99'];
                 
 
-for (var i = 0; i < products.length; i++) { // number 2
-  // number 3
-	//var input = products[i];
-	//var refer = input.indexOf(':');
-	//var name = input.slice(0,refer);
-	//var priceString = input.slice(refer + 1);
-	//var price = Number(priceString);
+for (var i = 0; i < products.length; i++) {
+/*  
+	var input = products[i];
+	var refer = input.indexOf(':');
+	var name = input.slice(0,refer);
+	var priceString = input.slice(refer + 1);
+	var price = Number(priceString);
+*/
+//Divide o item (string) da array 'products' em uma array com 2 itens. 
 	var subArray = products[i].split(':');
+//Item '0' da array 'subArray' é o que está antes dos dois pontos e o item '1' é o que está após.	
 	var name = subArray[0];
 	var price = Number(subArray[1]);
-  // number 4
+
 	total += price;
-  // number 5
+
 	var finalText = name + " - $" + price;
 
 	var listItem = document.createElement('li');
